@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Navigation Panel */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #E6B3CF, #a88297);
+    color: white;
+    padding: 2rem 0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 0 1rem;
+}
+
+/* Link Styles */
+a {
+    color: #2DB3B3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #33D4D4;
+    text-decoration: underline;
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    font-size: 1.1rem;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    background-color: rgba(255,255,255,0.1);
+    border-left-color: #eb64ae;
+    transform: translateX(5px);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 2rem 3rem;
+    max-width: calc(100% - 250px);
+}
+
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Home Section */
+.home-section {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 2rem;
+    border: 5px solid #eb64ae;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.home-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #e875b4;
+}
+
+.home-section .subtitle {
+    font-size: 1.3rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.home-section p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Content Sections */
+.content-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #e875b4;
+    border-bottom: 3px solid #eb64ae;
+    padding-bottom: 0.5rem;
+}
+
+.content-section h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: #e875b4;
+}
+
+.content-section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.research-item, 
+.course-item, 
+.cv-item {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-item:hover, 
+.course-item:hover, 
+.cv-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.research-item h4, 
+.course-item h4, 
+.cv-item h4 {
+    color: #e875b4;
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+
+
+/* Family Section - Photo Gallery */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.photo-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.family-photo {
+    width: 100%;
+    height: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover .family-photo {
+    transform: scale(1.05);
+}
+
+.photo-caption {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+    color: #555;
+    text-align: left;
+    margin: 0;
+    min-height: 60px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .home-section h2 {
+        font-size: 2rem;
+    }
+}

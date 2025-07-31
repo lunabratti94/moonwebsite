@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Bratti - Academic Website</title>
+    <link rel="stylesheet" href="webpage_design.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Navigation Panel -->
+        <nav class="sidebar">
+            <h1>Luna Bratti</h1>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="showSection('home')" class="active">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('research')">Research</a></li>
+                <li><a href="#" onclick="showSection('teaching')">Teaching</a></li>
+                <li><a href="#" onclick="showSection('cv')">CV</a></li>
+                <li><a href="#" onclick="showSection('family')">Cats</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Section -->
+            <section id="home" class="section active">
+                <div class="home-section">
+                    <img src="./assets/pictures/mooncita.png" alt="Profile Photo" class="profile-image">
+                    <h2> Luna Bratti</h2>
+                    <!--<p class="subtitle">Associate Professor of Computer Science</p>-->
+                    <p>Welcome to my (still under construction) website! Here you'll find information about my research, teaching, and professional experience. You can reach me at <a href="mailto:lunaa.bratti@gmail.com">lunaa.bratti@gmail.com</a>.</p>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="content-section">
+                    <h2>About Me</h2>
+                    <p>I am a PhD Student in Agricultural and Resource Economics at the University of Maryland College Park.</p>
+                    <p> My research interests are in labor and gender economics.</p>
+                </div>
+            </section>
+
+            <!-- Research Section -->
+            <section id="research" class="section">
+                <div class="content-section">
+                    <h2>Research</h2>
+                    <p>My research focuses on labor and gender economics.</p>
+                    <!--
+                    <div class="research-item">
+                        <h4>Neural Architecture Search for Language Models</h4>
+                        <p class="date">2023 - Present</p>
+                        <p>Investigating automated methods for designing efficient neural network architectures specifically optimized for natural language processing tasks. This project aims to reduce computational costs while maintaining state-of-the-art performance.</p>
+                    </div>
+                    -->
+                    <h3>Work in Progress</h3>
+                    <p>"A Structural Estimation of Childcare and Labor Markets: A General Equilibrium Approach"</p>
+                    <h3>Pre-PhD Publications</h3>
+
+                    <p><a href="https://www.sciencedirect.com/science/article/pii/S0264410X2300587X" target="_blank">"Understanding the Role of Personal Experiences and Contextual Variables in Shaping Risk Reduction Preferences,"</a> with Manuel Barrientos, Felipe Vasquez-Lavin and Constanza Rosales. <br><em> Vaccine, 2023</em></br></p>
+                    <p><a href="https://www.tandfonline.com/doi/full/10.1080/00036846.2021.2019186" target="_blank">"Assessing the Use of Pseudo-Panels to Estimate the Value of Statistical Life,"</a> with Felipe Vasquez-Lavin, Sergio Orrego, and Manuel Barrientos. <br><em>Applied Economics, 2022</em></br></p>
+                </div>
+            </section>
+
+            <!-- Teaching Section -->
+            <section id="teaching" class="section">
+                <div class="content-section">
+                    <h2>Teaching Assistant</h2>
+                    <p>I have been a teaching assistant for the following courses.</p>
+
+                    <div class="course-item">
+                        <h4>AREC 250: Elements of Agricultural and Resource Economics</h4>
+                        <p class="date">Spring 2023</p>
+                    </div>
+
+                    <div class="course-item">
+                        <h4>AREC 326: Intermediate Applied Microeconomics</h4>
+                        <p class="date">Spring 2025</p>
+                    </div>
+
+                    <div class="course-item">
+                        <h4>AREC 365: World Hunger, Population, and Food Supplies</h4>
+                        <p class="date">Fall 2023, Summer 2024, Fall 2025</p>
+                    </div>
+                    <!--
+                    <h3>Teaching Awards</h3>
+                    <p> Excellence in Teaching Award, University of Excellence (2023)<br>
+                     Student Choice Teaching Award, Department of Computer Science (2022)<br>
+                     Outstanding New Faculty Award, College of Engineering (2019)</p>
+                     -->
+                </div>
+            </section>
+
+            
+
+            <!-- CV Section -->
+            <section id="cv" class="section">
+                <div class="content-section">
+                    <h2>Curriculum Vitae</h2>
+                    You can download my CV here: <strong><a href ="./assets/pdfs/CV_Luna_Bratti.pdf" target = "_blank">CV</a></strong>.
+                </div>
+            </section>
+
+
+                 <!-- Family Section -->
+            <section id="family" class="section">
+                <div class="content-section">
+                    <h2>Cats</h2>
+                    <p>Here are some pictures of my cats Zoro (White) and Kuina (Orange).</p>
+
+                    <div class="photo-gallery">
+                        <div class="photo-item">
+                            <img src="./assets/pictures/Kuina_3.jpeg" alt="Kuina" class="family-photo">
+                            <p class="photo-caption">Kuina</p>
+                        </div>
+
+                        <div class="photo-item">
+                            <img src="./assets/pictures/Kuina_and_Zoro.jpeg" alt="Kuina and Zoro" class="family-photo">
+                            <p class="photo-caption"> Kuina & Zoro</p>
+                        </div>
+
+                        <div class="photo-item">
+                            <img src="./assets/pictures/Zoro_2.jpeg" alt="Zoro" class="family-photo">
+                            <p class="photo-caption">Zoro</p>
+                        </div>
+                    </div>
+                    <!--
+                    <p style="margin-top: 2rem; font-style: italic; color: #7f8c8d;">
+                        These moments remind me why work-life balance is so important. Family time provides the inspiration and energy that fuels my passion for research and teaching.
+                    </p>
+                    -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+           
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(sectionName).classList.add('active');
+
+            // Update navigation active state
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
